@@ -1,6 +1,7 @@
 const express = require('express');
 const getLessons = require('./controllers/getLessons');
 const dotenv = require('dotenv');
+const HttpError = require('./errors/httpError');
 
 dotenv.config();
 
@@ -19,6 +20,23 @@ app.get('/', async (req, res, next) => {
 
 app.post('/lessons', (req, res) => {
     res.status(200).send('Not implemented yet');
+});
+
+app.use((req, res) => {
+    return res.status(404).json({
+        description: 'Page not found',
+    });
+});
+
+app.use((err, req, res, next) => {
+    if (err instanceof HttpError) {
+        return res.status(err.status).json({ ...err, message: err.message });
+    }
+    console.log('Internal server error', err);
+
+    return res.status(500).json({
+        message: 'INTERNAL_SERVER_ERROR',
+    });
 });
 
 const port = +process.env.PORT;
