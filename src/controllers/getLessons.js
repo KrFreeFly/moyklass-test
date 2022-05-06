@@ -1,4 +1,4 @@
-const { selectWithStudentsAndTeachers, selectLessonsByTeachers, selectLessonsByStudentsCount } = require('../repositories/index');
+const { selectWithStudentsAndTeachers } = require('../repositories');
 const { Op } = require('sequelize');
 const config = require('../config/general');
 const { filterLessonsByStudentsCount, filterLessonsByTeachersIds, filterLessonsByStudentsAndTeachers } = require('../helpers/utils')

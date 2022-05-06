@@ -1,0 +1,10 @@
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+module.exports = {
+  'models-path': `${__dirname}/src/models`,
+  'migrations-path':`${__dirname}/migrations-seeds/migrations`,
+  'seeders-path':  `${__dirname}/migrations-seeds/seeds`,
+  url: process.env.DATABASE_URL,
+};
