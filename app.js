@@ -3,6 +3,7 @@ const getLessons = require('./src/controllers/getLessons');
 const createLessons = require('./src/controllers/createLessons');
 const dotenv = require('dotenv');
 const HttpError = require('./src/errors/httpError');
+const { getLessonsValidator, postLessonsValidator } = require('./src/validators/getLessons')
 
 dotenv.config();
 
@@ -10,9 +11,9 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/', async (req, res, next) => {
+app.get('/', getLessonsValidator, async (req, res, next) => {
     try {
-        const {date, status, teacherIds, studentsCount, page, lessonsPerPage} = req.query;
+        const { date, status, teacherIds, studentsCount, page, lessonsPerPage } = req.query;
         const result = await getLessons({date, status, teacherIds, studentsCount, page, lessonsPerPage});
 
         return res.status(200).json(result);
@@ -21,7 +22,7 @@ app.get('/', async (req, res, next) => {
     }
 });
 
-app.post('/lessons', async (req, res, next) => {
+app.post('/lessons', postLessonsValidator, async (req, res, next) => {
     try {
         const { teacherIds, title, days, firstDate, lessonsCount, lastDate } = req.body;
         const result = await createLessons(teacherIds, title, days, firstDate, lessonsCount, lastDate);
