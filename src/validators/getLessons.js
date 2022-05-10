@@ -29,7 +29,7 @@ const validateQuery = (schema) => {
 };
 
 const getLessonsValidator = validateQuery(Joi.object({
-    date: Joi.string().pattern(/^\d{4}-\d\d-\d\d(,\d{4}-\d\d-\d\d)?$/, {name: 'dates'}),
+    date: Joi.string().pattern(/^\d{4}-\d\d-\d\d(,\d{4}-\d\d-\d\d)?$/, { name: 'dates' }),
     status: Joi.number().integer().min(0).max(1),
     teacherIds: Joi.string().pattern(/^\d+(,\d+)*$/,{ name: 'teachers' }),
     studentsCount: Joi.string().pattern(/^\d+(,\d+)?$/,{ name: 'students' }),
