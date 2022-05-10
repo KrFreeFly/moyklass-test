@@ -20,35 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a2f6882-74f2-4355-a6fe-e24a56e1b733" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.sequelizerc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations-seeds/seeds/20220505151501-lesson-students.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations-seeds/seeds/20220505151502-lesson-teachers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/createLessons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/createLessonTeachersBulk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/createLessonsBulk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/selectTeachersById.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/validators/getLessons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/general.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/createLesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations-seeds/seeds/20220505151500-lessons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/getLessons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/getLessons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/errors/httpError.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/errors/httpError.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/init/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/lesson_students.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/lesson_students.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/lesson_teachers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/lesson_teachers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/lessons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/lessons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/students.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/students.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/teachers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/teachers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/selectLessonsByStudentsCount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/selectLessonsByStudentsCount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/selectLessonsByTeachers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/selectLessonsByTeachers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/selectWithStudentsAndTeachers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/selectWithStudentsAndTeachers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/createLessons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/createLessons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/errors/httpError.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/errors/httpError.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +41,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
@@ -90,12 +73,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mikes\WebstormProjects\moyklass-test" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mikes\WebstormProjects\moyklass-test\src\validators" />
+      <recent name="C:\Users\mikes\WebstormProjects\moyklass-test\src\selectLessons" />
       <recent name="C:\Users\mikes\WebstormProjects\moyklass-test\src" />
       <recent name="C:\Users\mikes\WebstormProjects\moyklass-test\init" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mikes\WebstormProjects\moyklass-test" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.index.js">
@@ -122,7 +107,9 @@
       <workItem from="1650296791873" duration="13079000" />
       <workItem from="1650529142942" duration="39316000" />
       <workItem from="1651175558093" duration="28137000" />
-      <workItem from="1651781871408" duration="1612000" />
+      <workItem from="1651781871408" duration="8575000" />
+      <workItem from="1651943407319" duration="593000" />
+      <workItem from="1652181055895" duration="1765000" />
     </task>
     <task id="LOCAL-00001" summary="Added basic error handling">
       <created>1650920076201</created>
@@ -131,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650920076201</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1. Added migrations&#10;2. Finished routes">
+      <created>1651825917459</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651825917459</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +145,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added basic error handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic error handling" />
+    <MESSAGE value="1. Added migrations&#10;2. Finished routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Added migrations&#10;2. Finished routes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2506" y="198" key="#Inspections" timestamp="1650919449353">
@@ -242,9 +237,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2658" y="135" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650919696474" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1650920078079">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1651825925237">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650920078079" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1651825925237" />
   </component>
 </project>
