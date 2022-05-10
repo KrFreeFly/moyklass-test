@@ -29,11 +29,11 @@ const validateQuery = (schema) => {
 };
 
 const getLessonsValidator = validateQuery(Joi.object({
-    date: Joi.string(),
+    date: Joi.string().pattern(/^\d{4}-\d\d-\d\d(,\d{4}-\d\d-\d\d)*$/, {name: 'dates'}),
     status: Joi.number().integer().min(0).max(1),
-    teacherIds: Joi.string(),
-    studentsCount: Joi.string(),
-    page: Joi.number().integer,
+    teacherIds: Joi.string().pattern(/^\d+(,\d+)*$/,{ name: 'teachers' }),
+    studentsCount: Joi.string().pattern(/^\d+(,\d+)?$/,{ name: 'teachers' }),
+    page: Joi.number().integer(),
     lessonsPerPage: Joi.number().integer(),
 }));
 
@@ -41,10 +41,10 @@ const postLessonsValidator = validateBody(Joi.object({
     teacherIds: Joi.array().items(Joi.number().integer()),
     title: Joi.string(),
     days: Joi.array().items(Joi.number().integer().min(0).max(6)).required(),
-    firstDate: Joi.string().required(),
+    firstDate: Joi.date().iso().options({ convert: true }).required(),
     lessonsCount: Joi.number().integer(),
-    lastDate: Joi.string(),
-}))
+    lastDate: Joi.date().iso().options({ convert: true }),
+}).xor('lessonsCount', 'lastDate'))
 
 module.exports = {
     getLessonsValidator,
