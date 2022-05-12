@@ -56,3 +56,5 @@ const host = process.env.HOST;
 app.listen(port, host, () => {
     console.log(`Server start on ${host}:${port}`);
 });
+
+module.exports = app;
